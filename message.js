@@ -8,7 +8,6 @@ const apiUrl =
 const failApiUrl =
   "https://ef9d2f76-8f96-458f-9ae1-c94db2fe81a0.mock.pstmn.io/fail"; // 失敗的 API
 
-
 export function setMessage(element) {
   const counter$ = interval(1000);
 
@@ -17,7 +16,7 @@ export function setMessage(element) {
       takeWhile((counterValue) => counterValue <= 3),
       switchMap((counterValue) => {
         if (counterValue == 3) {
-          console.log('哪尼')
+          console.log("哪尼");
         }
         return axios.get(apiUrl);
       }),
@@ -44,5 +43,4 @@ export function setMessage(element) {
   // const subscription = counter$
   //   .pipe(filter((value) => value <= 5))
   //   .subscribe(observer);
-
 }
