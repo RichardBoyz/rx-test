@@ -6,6 +6,7 @@ import { setMessage } from "./message";
 import { setTestApi } from "./testApi";
 import { setDetectClick } from "./detectClick";
 import { simpleObservable } from "./simpleObservable";
+import { setupAsyncTest } from "./asyncTest";
 
 document.querySelector("#app").innerHTML = `
   <div>
@@ -22,6 +23,7 @@ document.querySelector("#app").innerHTML = `
       <p id="testApi"></p>
       <div id="detectClick">123</div>
       <div id="simpleObservable"></div>
+      <div id="asyncTest"></div>
     </div>
     <p class="read-the-docs">
       Click on the Vite logo to learn more
@@ -29,8 +31,10 @@ document.querySelector("#app").innerHTML = `
   </div>
 `;
 
-setupCounter(document.querySelector("#counter"));
-setMessage(document.querySelector("#message"));
-setTestApi(document.querySelector("#testApi"));
-setDetectClick(document.querySelector("#detectClick"));
-simpleObservable(document.querySelector("#simpleObservable"));
+// simpleObservable(document.querySelector("#simpleObservable"));
+// setupCounter(document.querySelector("#counter"));
+// setMessage(document.querySelector("#message"));
+// setTestApi(document.querySelector("#testApi"));
+// setDetectClick(document.querySelector("#detectClick"));
+
+setupAsyncTest(document.querySelector("#asyncTest"));
